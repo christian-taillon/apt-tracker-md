@@ -6,7 +6,7 @@ This script converts the APT Groups and Operations Excel file from https://apt.t
 
 1. Clone this repository:
    ```
-   git clone https://github.com/yourusername/apt-tracker-md.git
+   git clone https://github.com/christian-taillon/apt-tracker-md.git
    cd apt-tracker-md
    ```
 
