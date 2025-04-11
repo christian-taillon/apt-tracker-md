@@ -1,0 +1,3 @@
+[submodule "malpedia-to-md"]
+	path = malpedia-to-md
+	url = git@github.com:shammahwoods/malpedia-to-md.git

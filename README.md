@@ -1,45 +1,77 @@
 # APT Tracker Markdown Converter
 
-This script converts the APT Groups and Operations Excel file from https://apt.threattracking.com into individual Markdown files.
+![APT Tracker Demo](apt-tracker-demo.png)
+
+> [!NOTE]
+> This script converts the APT Groups and Operations Excel file from https://apt.threattracking.com into individual Markdown files for use in note-taking and intelligence tracking systems like Obsidian.
+
+## Related Project by Ezra Woods
+
+🔍 **[Malpedia to Markdown Converter](https://github.com/shammahwoods/malpedia-to-md)** 
+- Created by [Ezra Woods](https://github.com/shammahwoods)
+- Converts Malpedia threat intelligence data to Markdown format
+- Complimentary tool for threat intelligence documentation
+
+## Prerequisites
+
+> [!WARNING]
+> Ensure you have the following installed:
+> - Python 3.7+
+> - Git
+
+[... rest of the README remains the same ...]
 
 ## Setup
 
-1. Clone this repository:
-   ```
+1. Clone the repository:
+   ```bash
    git clone https://github.com/christian-taillon/apt-tracker-md.git
    cd apt-tracker-md
    ```
 
-2. Create a virtual environment (optional but recommended):
+2. Initialize and update submodules:
+   ```bash
+   git submodule init
+   git submodule update
    ```
+
+3. Create a virtual environment:
+   ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
    ```
 
-3. Install the required packages:
-   ```
+4. Install dependencies:
+   ```bash
    pip install -r requirements.txt
    ```
 
-4. Download the "APT Groups and Operations.xlsx" file from https://apt.threattracking.com and place it in the same directory as the script.
+5. Download the Excel file:
+   > [!TIP]
+   > Download "APT Groups and Operations.xlsx" from https://apt.threattracking.com and place it in the project directory.
 
 ## Usage
 
-Run the script with:
-
-```
+Run the script:
+```bash
 python apt.py
 ```
 
-If you want to specify a different Excel file, use the `-f` or `--file` option:
+### Optional Arguments
 
-```
-python apt.py -f /path/to/your/excel/file.xlsx
-```
+- `-f` or `--file`: Specify a custom Excel file
+  ```bash
+  python apt.py -f /path/to/your/excel/file.xlsx
+  ```
 
-The script will create directories for each sheet in the Excel file and generate Markdown files for each APT group.
+## Customization
 
-## Note
+> [!IMPORTANT]
+> You can modify the `modify_content` function in the script to:
+> - Use different naming conventions
+> - Link to alternative intelligence sources
+> - Customize output formatting
 
-The script currently creates links using CrowdStrike's naming convention. You can modify the `modify_content` function in the script to use different naming conventions or link to other intelligence source providers.
-```
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
